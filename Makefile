@@ -1,5 +1,5 @@
 CC=avr-gcc
-CFLAGS=-ggdb -mmcu=atmega328p -o out.elf
+CFLAGS=-ggdb -mmcu=atmega328p -o out.elf --sysroot=/usr/avr
 
 out.elf: main.o
 	$(CC) $(CFLAGS) $^ -o $@
