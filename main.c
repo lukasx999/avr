@@ -2,6 +2,7 @@
 #include <avr/interrupt.h>
 #include <avr/io.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 bool interrupt = false;
 
@@ -12,6 +13,7 @@ void foo(void) {
 
 // __vector_11
 ISR(TIMER1_COMPA_vect) {
+    printf("interrupt!");
     int timer2 = TCNT1;
     foo();
     interrupt = true;
@@ -28,6 +30,7 @@ int main(void) {
     sei();
 
     while (1) {
+        printf("loop!");
     }
 
 }
