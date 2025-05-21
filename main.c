@@ -5,7 +5,8 @@
 
 bool interrupt = false;
 
-// dump binary memory result.bin 0x0 0x32
+// avr-objdump -d out.elf
+// (gdb) dump binary memory result.bin 0x0 0x32
 
 void foo(void) {
 }
